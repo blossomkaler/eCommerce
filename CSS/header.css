@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --main-font : 'Kumbh Sans', sans-serif;
+    --dark-blue : hsl(220, 13%, 13%);
+    --dark-grayish-blue : hsl(219, 9%, 45%);
+    --grayish-blue : hsl(220, 14%, 75%);
+    --light-grayish-blue : hsl(223, 64%, 98%);
+    --white : hsl(0, 0%, 100%);
+    --opaque-black : hsl(0, 0%, 0%);        /* with 75% opacity for lightbox background */
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 1.5px;
+    font-family: var(--main-font);
+    font-size: 1rem;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding-block: 2rem;
+    padding-inline:  min(8rem, 5vw);
+}
+
+.primary-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:  min(3rem, 3vw);
+}
+
+.logo{
+    height: 1.7rem;
+}
+
+.nav-items{
+    display: flex;
+    gap:  min(2rem, 2vw);
+    list-style: none;
+
+}
+
+.nav-items li a{  
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+}
+
+.secondary-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: min(3rem, 3vw);
+}
+
+.avatar{
+    height: 3.2rem;
+}
+
+.close-menu, .hamburger{
+    display: none;
+}
+
+/*``````````````````MOBILE DESIGN``````````````````*/
+
+
+@media only screen and (max-width : 790px){
+.nav-items{
+    display: none;
+}
+
+.hamburger{
+    display: block;
+    cursor: pointer;
+    height: 1.5rem;
+}
+
+/*```````````````````MOBILE MENU```````````````````````*/
+
+.hamburger.active{
+    display: none;
+}
+
+.header.active {
+    background-color: rgb(235, 240, 239); 
+    align-items: flex-start;
+    height: 100vh;
+    width: 70vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding-block: 2rem;
+    padding-inline: min(3rem, 5vw);
+
+}
+
+.logo.active {
+    display: none;
+}
+.primary-nav.active{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.secondary-nav.active{
+    display: none;
+}
+
+.nav-items.active{
+    display: block;
+    flex-direction: column;
+}
+
+.nav-items.active li a{  
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.close-menu.active {
+    display: block; 
+    text-align: left;
+    height: 1rem;
+    cursor: pointer;
+    height: 1.5rem;
+}
+
+}
+
+
+/*````````````````````````````````````````````````````*/
+@media only screen and (max-width : 550px){
+.header{
+    padding-block: 1.5rem;
+}
+
+.hamburger{
+    height: 1.2rem;
+}
+    
+.logo{
+    height: 1.5rem;
+}
+
+.avatar{
+    height: 2rem;
+}
+        
+}
+
+
+
+/*````````````````````MOBILE-MENU(HEADER)`````````````````````````````
+
+@media only screen and (max-width : 790px){
+
+.header{
+    background-color: rgb(235, 240, 239); 
+    align-items: flex-start;
+    height: 100vh;
+    width: 70vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding-block: 2rem;
+    padding-inline: min(3rem, 5vw);
+
+}
+
+.logo{
+    display: none;
+}
+.primary-nav{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.secondary-nav{
+    display: none;
+}
+
+.nav-items{
+    flex-direction: column;
+}
+
+.nav-items li a{  
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.close-menu{
+    display: block; 
+    text-align: left;
+    height: 1rem;
+    cursor: pointer;
+    height: 1.5rem;
+}
+
+
+}
+
+*/
