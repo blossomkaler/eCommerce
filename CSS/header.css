@@ -7,7 +7,6 @@
     --grayish-blue : hsl(220, 14%, 75%);
     --light-grayish-blue : hsl(223, 64%, 98%);
     --white : hsl(0, 0%, 100%);
-    --opaque-black : hsl(0, 0%, 0%);        /* with 75% opacity for lightbox background */
     --orange: hsl(26, 100%, 55%);
     --pale-orange: hsl(25, 100%, 94%);
 }
@@ -81,7 +80,7 @@
     height: 1.5rem;
 }
 
-/*```````````````````MOBILE MENU```````````````````````*/
+          /*````````MOBILE MENU`````````*/
 
 .hamburger.active{
     display: none;
@@ -116,13 +115,14 @@
 
 .nav-items.active{
     display: block;
-    flex-direction: column;
 }
 
-.nav-items.active li a{  
+.nav-items.active li a{ 
+    display: block; 
     color: black;
     font-size: 1.2rem;
     font-weight: 700;
+    padding-bottom: 1rem;
 }
 
 .close-menu.active {
@@ -156,57 +156,3 @@
         
 }
 
-
-
-/*````````````````````MOBILE-MENU(HEADER)`````````````````````````````
-
-@media only screen and (max-width : 790px){
-
-.header{
-    background-color: rgb(235, 240, 239); 
-    align-items: flex-start;
-    height: 100vh;
-    width: 70vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    padding-block: 2rem;
-    padding-inline: min(3rem, 5vw);
-
-}
-
-.logo{
-    display: none;
-}
-.primary-nav{
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 3rem;
-}
-
-.secondary-nav{
-    display: none;
-}
-
-.nav-items{
-    flex-direction: column;
-}
-
-.nav-items li a{  
-    color: black;
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-.close-menu{
-    display: block; 
-    text-align: left;
-    height: 1rem;
-    cursor: pointer;
-    height: 1.5rem;
-}
-
-
-}
-
-*/

@@ -17,6 +17,7 @@ hamburger.addEventListener('click',function(){
     
 });
 
+
 cross.addEventListener('click',function(){
     hamburger.classList.remove('active');
     header.classList.remove('active');
