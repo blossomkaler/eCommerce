@@ -1,11 +1,12 @@
 .container{
     display: flex;
     align-items: center;
-    background-color: aliceblue;
-    gap: 5rem;
+  /*   background-color: aliceblue; */
+    gap: 5vw;
     padding-inline: min(10rem, 7vw);
-    padding-top: 2rem;
 }
+
+/*``````````````IMAGES``````````````````*/
 
 .images{
     display: flex;
@@ -14,8 +15,10 @@
     gap: 1rem;
 }
 #main-img{
-    height: min(28.5rem, 42vw);
-    width: min(28.5rem, 42vw);
+    height: 28rem;
+    width: 28rem;
+ /*    height: min(28.5rem, 42vw);
+    width: min(28.5rem, 42vw); */
     border-radius: 1rem;
 }
 
@@ -25,16 +28,123 @@
 }
 
 .thumbnails img{
-    height: min(6rem, 9vw);
-    width: min(6rem, 9vw);
+    height: 6rem;
+    height: 6rem;
+ /*    height: min(6rem, 9vw);
+    width: min(6rem, 9vw); */
     border-radius: 1rem;
 }
 
 
+/*````````````````CONTENT````````````````````*/
+
+.company{
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 700;
+    font-size: clamp(1rem, 2vw, 1.2rem) ;
+    padding-bottom: 1rem;
+}
+
+.heading{
+    font-size: clamp(3rem, 4vw, 4rem);
+    font-weight: 700;
+}
+
+.text-content{
+    font-size: 1.1rem;
+    color: var(--dark-grayish-blue);
+    font-size: 1.2rem;
+    padding-block: 2.5rem;
+
+}
+
+.discount{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.discounted-price{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.discount-percent{
+    color: var(--orange);  
+    background-color: var(--pale-orange);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.actual-price{
+    color: var(--grayish-blue);
+    font-weight: 700;
+    padding-block: 1rem;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.buttons{
+    display: flex;
+    gap: 2vw;
+}
+
+
+.quantity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-grayish-blue);
+    width: 30%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+
+.minus{
+    height: 0.35rem;
+    cursor: pointer;
+}
+
+.plus{
+    height: 1rem;
+    cursor: pointer;
+}
+
+.cart-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--orange);
+    width: 40%;
+    border-radius: 0.5rem; 
+    color: white;
+    cursor: pointer; 
+    gap: 1vw; 
+}
+
+@media only screen and (max-width : 1045px){
+.buttons{
+    flex-direction: column;
+    gap: 1rem;
+}
+    
+.quantity{
+    width: 100%;
+}
+
+.cart-btn{
+    width: 100%;
+    padding-block: 1rem;
+}
+        
+}
+
 
 /*````````````````````````````````````*/
 
-@media only screen and (max-width : 790px){
+@media only screen and (max-width : 890px){
 
 .container{
     flex-direction: column;

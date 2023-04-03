@@ -16,8 +16,11 @@
     margin: 0;
     box-sizing: border-box;
     letter-spacing: 1.5px;
-    font-family: var(--main-font);
-    font-size: 1rem;
+    font-family: var(--main-font); 
+}
+
+body{
+    font-size: 1.2rem;
 }
 
 .header{
@@ -60,6 +63,7 @@
 
 .avatar{
     height: 3.2rem;
+    cursor: pointer;
 }
 
 .close-menu, .hamburger{
@@ -69,7 +73,7 @@
 /*``````````````````MOBILE DESIGN``````````````````*/
 
 
-@media only screen and (max-width : 790px){
+@media only screen and (max-width : 890px){
 .nav-items{
     display: none;
 }
