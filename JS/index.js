@@ -1,4 +1,4 @@
-/* const pictures = [
+const pictures = [
     {imgSrc : "/images/image-product-1.jpg"},
     {imgSrc : "/images/image-product-2.jpg"},
     {imgSrc : "/images/image-product-3.jpg"},
@@ -24,11 +24,29 @@ document.addEventListener("click", function(e) {
       });
 
     document.querySelector('#main-img').src = pictures[n].imgSrc;
+    document.querySelector('.lightbox #main-img').src = pictures[n].imgSrc;
+
     target.classList.add('active-thumb');
   
+  
   });
- */
-  /*``````````````COUNTER`````````````````````````*/
+ 
+/*``````````````````````LIGHT-BOX`````````````````````````*/
+let lightBox = document.querySelector('.lightbox');
+let crossLb =   document.querySelector('.close-lb');
+
+ mainImg.addEventListener('click',function(){
+  lightBox.classList.add('active-lightbox');
+ });
+
+crossLb.addEventListener('click',function(){
+  lightBox.classList.remove('active-lightbox');  
+
+ });
+
+
+ 
+  /*```````````````````COUNTER`````````````````````````*/
   let count = 0;
   let quantity = document.querySelector('.count');
 
@@ -44,3 +62,5 @@ document.querySelector('.plus').addEventListener('click',function(){
   quantity.textContent = count;
 
  });
+
+

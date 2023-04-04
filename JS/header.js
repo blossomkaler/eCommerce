@@ -22,3 +22,13 @@ cross.addEventListener('click',function(){
     cross.classList.remove('active');
     
 });
+
+
+/*```````````````````````CART``````````````````````````*/
+
+let cart = document.querySelector('.cart-img');
+
+
+cart.addEventListener('click',function(){
+   document.querySelector('.cart-desc').classList.toggle('active-cart');
+});

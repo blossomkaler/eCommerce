@@ -1,9 +1,9 @@
 .container{
     display: flex;
     align-items: center;
-  /*   background-color: aliceblue; */
     gap: 5vw;
     padding-inline: min(10rem, 7vw);
+    padding-top: 2rem;
 }
 
 /*``````````````IMAGES``````````````````*/
@@ -18,6 +18,7 @@
     height: 28rem;
     width: 28rem;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .thumbnails{
@@ -32,8 +33,13 @@
     cursor: pointer;
 }
 
+.thumbnails :hover{
+    opacity: 50%;
+}
+
 .active-thumb {
     border: 3px solid var(--orange);
+    opacity: 15%;
 }
 
 .slider-icons {
@@ -42,6 +48,39 @@
 
 
 /*`````````````LIGHT-BOX```````````````````````*/
+
+.lightbox{
+  display: none;
+}
+
+.lightbox.active-lightbox{
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.75);
+    z-index: 10;
+  }
+
+ .lightbox #main-img{
+    height: 32rem;
+    width: 32rem;
+}
+
+.lightbox .thumbnails img{
+    height: 7rem;
+    height: 7rem;
+}
+
+  .lightbox .thumbnails {
+    display: flex;
+    gap: 1.1rem;
+  }
 
 
 /*````````````````CONTENT````````````````````*/
@@ -127,6 +166,11 @@
     color: white;
     cursor: pointer; 
     gap: min(2rem, 4%); 
+
+}
+
+.cart-btn img{
+    filter: brightness(5);
 }
 
 /*````````````BUTTONS````````````````````````*/
@@ -158,8 +202,15 @@
     padding-bottom: 3rem;
 }
 
+.product-img{
+    display: flex;
+    overflow-x: hidden;
+    height: 20rem;
+}
+
 #main-img{
     width: 100vw;
+    object-fit: cover;
     height: auto;
     border-radius: 0;
 }
@@ -213,6 +264,9 @@
     padding-block: 0;
 }
 
+.lightbox.active-lightbox {
+    display: none;
+}
 
 
 }

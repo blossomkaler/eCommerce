@@ -61,7 +61,7 @@ body{
     gap: min(3rem, 3vw);
 }
 
-.cart{
+.cart-img{
     cursor: pointer;
 }
 
@@ -72,6 +72,36 @@ body{
 
 .close-menu, .hamburger{
     display: none;
+}
+
+/*``````````````CART DESCRIPTION````````````````````*/
+.cart-desc{
+    display: none;
+    position: absolute;
+    right: min(8rem, 5vw);
+    top: 5.7rem;
+    width: 20rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    box-shadow: 0.4em 0.4em .4em  rgba(0, 0, 0, 0.253), -0.3em 0 .4em rgba(0, 0, 0, 0.2);
+    background-color: white;
+    font-size: 1rem;
+}
+
+.cart-heading{
+    padding: 1rem;
+}
+
+.cart-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    color: var(--dark-grayish-blue);
+}
+
+.cart-desc.active-cart{
+    display: block;
 }
 
 /*``````````````````MOBILE DESIGN``````````````````*/
@@ -87,7 +117,7 @@ body{
     cursor: pointer;
     height: 1.5rem;
 }
-
+    
           /*````````MOBILE MENU`````````*/
 
 .hamburger.active{
@@ -154,6 +184,15 @@ body{
 .avatar{
     height: 2rem;
 }
-        
+
+/*```````````CART````````````````*/
+
+.cart-desc{
+    display: none;
+    width: 80vw;
+    left: 3rem; 
+    right: 3rem;  
+}
+
 }
 
