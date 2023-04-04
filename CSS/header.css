@@ -189,9 +189,7 @@ body{
 
 .cart-desc{
     display: none;
-    width: 80vw;
-    left: 3rem; 
-    right: 3rem;  
+    width: 80vw; 
 }
 
 }
