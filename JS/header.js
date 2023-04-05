@@ -48,10 +48,46 @@ document.querySelector('.plus').addEventListener('click',function(){
 
 document.querySelector('.minus').addEventListener('click',function(){
 if(count>0) count--; 
-else return
+else return;
+
+if(count == 0) {
+    filledCart.classList.remove('filled-active');
+    emptyCart.classList.remove('filled-active');
+}
+
 quantity.textContent = count;
 document.querySelector('.prod-quan-incart').textContent = count;
 document.querySelector('.total-amt').textContent = `$${count * 125}`;
 
+
 });
+
+
+/*````````````````````ADD TO CART BUTTON```````````````````````````*/
+
+const cartBtn = document.querySelector('.cart-btn');
+const emptyCart = document.querySelector('.empty-cart');
+const filledCart = document.querySelector('.filled-cart');
+const deleteBtn = document.querySelector('.delete-icon');
+
+cartBtn.addEventListener('click',function(){
+    if(quantity.textContent == 0) {
+        filledCart.classList.remove('filled-active');
+        emptyCart.classList.remove('filled-active');
+
+    }
+
+    else if(quantity.textContent>0) {
+        filledCart.classList.add('filled-active');
+        emptyCart.classList.add('filled-active');
+    }
+    else return;
+}); 
+
+deleteBtn.addEventListener('click',function(){
+
+    filledCart.classList.remove('filled-active');
+    emptyCart.classList.remove('filled-active');
+
+}); 
 

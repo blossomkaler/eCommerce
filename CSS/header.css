@@ -102,17 +102,23 @@ body{
     padding-block: 4rem;
 }
 
-
 .cart-desc.active-cart{
     display: block;
 }
 
+.empty-cart.filled-active{
+   display: none;
+}
+
 /*``````````````````FILLED CART```````````````````````*/
 
-/* .filled-cart{
+.filled-cart{
     display: none;
-} */
+}
 
+.filled-cart.filled-active{
+    display: block;
+}
 
 .cart-details{
     display: flex;
