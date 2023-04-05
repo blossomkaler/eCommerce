@@ -32,3 +32,26 @@ let cart = document.querySelector('.cart-img');
 cart.addEventListener('click',function(){
    document.querySelector('.cart-desc').classList.toggle('active-cart');
 });
+
+
+/*``````````````COUNTER and CART-AMOUNT``````````````*/
+let count = 0;
+let quantity = document.querySelector('.count');
+
+document.querySelector('.plus').addEventListener('click',function(){ 
+  count ++;
+  quantity.textContent = count;
+  document.querySelector('.prod-quan-incart').textContent = count;
+  document.querySelector('.total-amt').textContent = `$${count * 125}`;
+
+});
+
+document.querySelector('.minus').addEventListener('click',function(){
+if(count>0) count--; 
+else return
+quantity.textContent = count;
+document.querySelector('.prod-quan-incart').textContent = count;
+document.querySelector('.total-amt').textContent = `$${count * 125}`;
+
+});
+

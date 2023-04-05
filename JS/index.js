@@ -46,21 +46,3 @@ crossLb.addEventListener('click',function(){
 
 
  
-  /*```````````````````COUNTER`````````````````````````*/
-  let count = 0;
-  let quantity = document.querySelector('.count');
-
-document.querySelector('.plus').addEventListener('click',function(){ 
-    count ++;
-    quantity.textContent = count;
-  
-});
-
- document.querySelector('.minus').addEventListener('click',function(){
-  if(count>0) count--; 
-  else return
-  quantity.textContent = count;
-
- });
-
-

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700;800&display=swap');
 
 :root{
     --main-font : 'Kumbh Sans', sans-serif;
@@ -15,12 +15,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    letter-spacing: 1.5px;
     font-family: var(--main-font); 
 }
 
 body{
     font-size: 1.2rem;
+    letter-spacing: 1.5px;
 }
 
 .header{
@@ -80,7 +80,7 @@ body{
     position: absolute;
     right: min(8rem, 5vw);
     top: 5.7rem;
-    width: 20rem;
+    width: 25rem;
     border-radius: 0.5rem;
     font-weight: 700;
     box-shadow: 0.4em 0.4em .4em  rgba(0, 0, 0, 0.253), -0.3em 0 .4em rgba(0, 0, 0, 0.2);
@@ -93,16 +93,61 @@ body{
 }
 
 .cart-status{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10rem;
     color: var(--dark-grayish-blue);
+    padding: 1rem;
 }
+
+.empty-cart{
+    text-align: center;
+    padding-block: 4rem;
+}
+
 
 .cart-desc.active-cart{
     display: block;
 }
+
+/*``````````````````FILLED CART```````````````````````*/
+
+/* .filled-cart{
+    display: none;
+} */
+
+
+.cart-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-in-cart img{
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 0.3rem;
+}
+
+.delete-icon img{
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.total-amt{
+    color: black;
+    font-weight: 800;
+    padding-left: 0.5rem;
+}
+
+.checkout-btn{
+    background-color: var(--orange);
+    width: 100%;
+    border-radius: 0.5rem; 
+    color: white;
+    cursor: pointer; 
+    padding: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
 
 /*``````````````````MOBILE DESIGN``````````````````*/
 
@@ -189,7 +234,20 @@ body{
 
 .cart-desc{
     display: none;
-    width: 80vw; 
+    width: 90vw;
+    
+}
+.cart-status{
+    padding: 0.7rem;
+}
+
+.cart-details{
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.cart-details{
+    gap: 0.3rem;
 }
 
 }
