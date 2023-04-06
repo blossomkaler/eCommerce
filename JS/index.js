@@ -47,10 +47,23 @@ crossLb.addEventListener('click',function(){
 
  
 /*``````````````````SLIDER (MOBILE DESIGN)```````````````````*/
-/*  const slides = document.querySelectorAll('.slide');
- const counter = 0;
 
- slides.forEach((slide, index) => {
-  slide.style.left = `${index * 100}%`;
- }
- ) */
+const prev = document.querySelector('.previous');
+const next = document.querySelector('.next');
+const slide = document.querySelector('.slide');
+let counter = 0;
+
+next.addEventListener('click',function(){
+  counter++;
+  if(counter>3) counter = 0 ;
+  slide.src = pictures[counter].imgSrc;
+}
+);
+
+prev.addEventListener('click',function(){
+  counter--;
+  if(counter == -1) counter = 3 ;
+  slide.src = pictures[counter].imgSrc;
+
+}
+);
