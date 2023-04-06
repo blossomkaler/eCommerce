@@ -46,3 +46,11 @@ crossLb.addEventListener('click',function(){
 
 
  
+/*``````````````````SLIDER (MOBILE DESIGN)```````````````````*/
+/*  const slides = document.querySelectorAll('.slide');
+ const counter = 0;
+
+ slides.forEach((slide, index) => {
+  slide.style.left = `${index * 100}%`;
+ }
+ ) */
