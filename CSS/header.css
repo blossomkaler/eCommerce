@@ -54,6 +54,14 @@ body{
     color: var(--dark-grayish-blue);
 }
 
+.nav-items li a:hover{ 
+    color: black; 
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 3rem;
+    text-decoration-color: var(--orange);
+}
+
 .secondary-nav{
     display: flex;
     justify-content: center;
@@ -62,12 +70,42 @@ body{
 }
 
 .cart-img{
+    height: 2rem;
     cursor: pointer;
+}
+
+.cart-img:hover{
+    opacity: 50%;
+}
+
+.cart-item{
+    display: flex;
+    position: relative;
+}
+
+.count-num{
+    background-color: var(--orange);
+    color: white;
+    font-size: 10px;
+    border-radius: 45%;
+    padding: 2px 5px;
+    position: absolute;
+    right: -5px ;
+    top: -5px;
+    display: none;
+}
+
+.count-num.active-num{
+    display: block;
 }
 
 .avatar{
     height: 3.2rem;
     cursor: pointer;
+}
+.avatar:hover{
+    border: 3px solid var(--orange);
+    border-radius: 50%;
 }
 
 .close-menu, .hamburger{

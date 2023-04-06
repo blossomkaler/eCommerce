@@ -28,18 +28,28 @@ cross.addEventListener('click',function(){
 
 let cart = document.querySelector('.cart-img');
 
-
-cart.addEventListener('click',function(){
-   document.querySelector('.cart-desc').classList.toggle('active-cart');
+/* cart.addEventListener('mouseover',function(){
+   document.querySelector('.cart-desc').classList.add('active-cart');
 });
+
+cart.addEventListener('mouseout',function(){
+    document.querySelector('.cart-desc').classList.remove('active-cart');
+ });
+ */
+cart.addEventListener('click',function(){
+    document.querySelector('.cart-desc').classList.toggle('active-cart');
+ });
 
 
 /*``````````````COUNTER and CART-AMOUNT``````````````*/
 let count = 0;
 let quantity = document.querySelector('.count');
+const cartNum = document.querySelector('.count-num');                      //NUMBER ON CART
 
 document.querySelector('.plus').addEventListener('click',function(){ 
   count ++;
+
+  cartNum.textContent = count;
   quantity.textContent = count;
   document.querySelector('.prod-quan-incart').textContent = count;
   document.querySelector('.total-amt').textContent = `$${count * 125}`;
@@ -53,8 +63,10 @@ else return;
 if(count == 0) {
     filledCart.classList.remove('filled-active');
     emptyCart.classList.remove('filled-active');
+    cartNum.classList.remove('active-num');
 }
 
+cartNum.textContent = count;
 quantity.textContent = count;
 document.querySelector('.prod-quan-incart').textContent = count;
 document.querySelector('.total-amt').textContent = `$${count * 125}`;
@@ -74,12 +86,14 @@ cartBtn.addEventListener('click',function(){
     if(quantity.textContent == 0) {
         filledCart.classList.remove('filled-active');
         emptyCart.classList.remove('filled-active');
+        cartNum.classList.remove('active-num');
 
     }
 
     else if(quantity.textContent>0) {
         filledCart.classList.add('filled-active');
         emptyCart.classList.add('filled-active');
+        cartNum.classList.add('active-num');
     }
     else return;
 }); 
@@ -88,6 +102,8 @@ deleteBtn.addEventListener('click',function(){
 
     filledCart.classList.remove('filled-active');
     emptyCart.classList.remove('filled-active');
+    cartNum.classList.remove('active-num');
 
 }); 
+
 
