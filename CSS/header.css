@@ -27,7 +27,7 @@ body{
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    padding-block: 2rem;
+    padding-block: 1rem;
     padding-inline:  min(8rem, 5vw);
 }
 
@@ -58,7 +58,7 @@ body{
     color: black; 
     text-decoration: underline;
     text-decoration-thickness: 4px;
-    text-underline-offset: 3rem;
+    text-underline-offset: 2rem;
     text-decoration-color: var(--orange);
 }
 
