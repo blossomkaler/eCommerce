@@ -294,6 +294,14 @@
     top: 9rem;
 }
 
+.previous :hover{
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+.next :hover{
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
 .previous{
     left: 1rem;   
 }

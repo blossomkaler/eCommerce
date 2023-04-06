@@ -75,7 +75,7 @@ body{
 }
 
 .cart-img:hover{
-    opacity: 50%;
+    opacity: 50%; 
 }
 
 .cart-item{
@@ -289,11 +289,13 @@ body{
 .cart-details{
     font-weight: 400;
     letter-spacing: 0.5px;
-}
-
-.cart-details{
     gap: 0.3rem;
 }
+
+.cart-img{
+    height: 1.3rem;
+}
+
 
 }
 
