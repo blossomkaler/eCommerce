@@ -193,6 +193,14 @@ body{
     margin-top: 1rem;
 }
 
+.checkout-btn:hover{
+    filter: opacity(50%);
+}
+
+.delete-icon img:hover{
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
 
 /*``````````````````MOBILE DESIGN``````````````````*/
 
