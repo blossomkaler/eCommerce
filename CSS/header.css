@@ -86,6 +86,7 @@ body{
     box-shadow: 0.4em 0.4em .4em  rgba(0, 0, 0, 0.253), -0.3em 0 .4em rgba(0, 0, 0, 0.2);
     background-color: white;
     font-size: 1rem;
+    z-index: 4;
 }
 
 .cart-heading{
