@@ -27,6 +27,7 @@ cross.addEventListener('click',function(){
 /*```````````````````````CART``````````````````````````*/
 
 let cart = document.querySelector('.cart-img');
+let cartDesc = document.querySelector('.cart-desc');
 
 /* cart.addEventListener('mouseover',function(){
    document.querySelector('.cart-desc').classList.add('active-cart');
@@ -37,8 +38,17 @@ cart.addEventListener('mouseout',function(){
  });
  */
 cart.addEventListener('click',function(){
-    document.querySelector('.cart-desc').classList.toggle('active-cart');
+    cartDesc.classList.toggle('active-cart');
  });
+
+ cartDesc.addEventListener('mouseover',function(){
+    cartDesc.classList.add('active-cart');
+ });
+
+cartDesc.addEventListener('mouseout',function(){
+    cartDesc.classList.remove('active-cart');
+ });
+
 
 
 /*``````````````COUNTER and CART-AMOUNT``````````````*/

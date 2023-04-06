@@ -81,10 +81,18 @@
     height: 7rem;
 }
 
-  .lightbox .thumbnails {
+.lightbox .thumbnails {
     display: flex;
     gap: 1.1rem;
   }
+
+.close-lb{
+    filter: brightness(10);
+}
+
+.close-lb:hover{
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
 
 
 /*````````````````CONTENT````````````````````*/
